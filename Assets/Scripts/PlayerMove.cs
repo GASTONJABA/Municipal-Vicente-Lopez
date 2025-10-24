@@ -43,15 +43,15 @@ public class PlayerMove : MonoBehaviour
     void OnMove(InputAction.CallbackContext context)
     {
         //upVector = context.ReadValue<  Vector2>();
-        //moveInput = context.ReadValue< Vector2>();
+        moveInput = context.ReadValue< Vector2>();
     }
 
     void Update()
     {
-        moveInput = moveAction.ReadValue<Vector2>();
+        //moveInput = moveAction.ReadValue<Vector2>();
         //movete = playerControls.ReadValue<Vector2>();
-        HandleMovement();
-       //transform.position = moveInput;
+        //HandleMovement();
+       transform.position = moveInput;
        // transform.position = upVector;
         // Vector2 move = transform.up * moveInput.y + transform.forward * moveInput.y;
     }
