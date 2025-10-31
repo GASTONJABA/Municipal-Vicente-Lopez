@@ -7,10 +7,10 @@
             "id": "045c1cf6-4b43-4bd7-989d-8a1af9a060f1",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "MoverCarril",
                     "type": "Value",
                     "id": "bb10035c-573f-4fea-af20-47b2ee51cb68",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -18,57 +18,35 @@
             ],
             "bindings": [
                 {
-                    "name": "2D Vector",
-                    "id": "5d8ff1b9-6c60-4676-a1b1-b3f33c97c61a",
-                    "path": "2DVector",
+                    "name": "1D Axis",
+                    "id": "e997e121-119f-4d38-9950-864bb8405530",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "MoverCarril",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
-                    "id": "0af660fc-8482-4b3d-9058-461774237b7f",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "84141452-cd12-4b31-9f6e-0f7ccd4aa00c",
+                    "name": "negative",
+                    "id": "9a725995-e7e3-45e3-a187-45e6b460ef95",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "MoverCarril",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "left",
-                    "id": "22853940-b1c2-4e78-93e6-0aa94b5833c1",
-                    "path": "<Keyboard>/a",
+                    "name": "positive",
+                    "id": "65506825-09c5-4b55-8a9d-64dd65362eb5",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "c06ceb2a-e6b0-4e5a-a91a-aac92de611c8",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
+                    "action": "MoverCarril",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
