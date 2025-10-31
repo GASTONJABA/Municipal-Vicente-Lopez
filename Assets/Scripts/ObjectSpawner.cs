@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 public class ObjectSpawner : MonoBehaviour
 {
+
+
     // Las mismas posiciones que usa el Bus
     public List<Transform> lanePositions = new List<Transform>();
 
@@ -47,5 +49,29 @@ public class ObjectSpawner : MonoBehaviour
 
         // 3. Crear el objeto en la escena
         Instantiate(prefabToInstantiate, spawnPoint, Quaternion.identity);
+
+    }
+
+
+
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Verifica si colisionamos con el objeto de Puntuación
+        if (other.CompareTag("Muro"))
+        {
+            Debug.Log("¡pluum!");
+
+            // **TODO: Implementar la lógica del puntaje (ej: ScoreManager.AddScore(1));**
+
+            // Destruir el objeto de puntuación
+            Destroy(other.gameObject);
+        }
+
+
+
+
+
     }
 }

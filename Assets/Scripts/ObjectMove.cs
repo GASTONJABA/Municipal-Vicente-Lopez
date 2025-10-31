@@ -7,7 +7,7 @@ public class ObjectMove : MonoBehaviour
     // 1. Variable pública para controlar la velocidad desde el Inspector de Unity
     [SerializeField]
     private float velocidad = 5.0f;
-
+   
     // Este método se llama una vez por cada frame.
     void Update()
     {
@@ -22,5 +22,10 @@ public class ObjectMove : MonoBehaviour
         // 4. Aplica el desplazamiento a la posición actual del objeto
         // transform.Translate mueve el objeto en el espacio local.
         transform.Translate(desplazamiento);
+
+
+
+
+
     }
 }

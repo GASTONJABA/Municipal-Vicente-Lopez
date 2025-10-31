@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Movimiento : MonoBehaviour
+public class Player : MonoBehaviour
 {
 
     public List<Transform> posiblesMovimientos = new List<Transform>();
     public int currentPosicion = 1;
     public GameObject truck;
     public float moveSpeed = 10f; // Velocidad para el movimiento suave (Lerp)
-
+    public float Score = 0;
+    public float Vida = 3;
 
 
 
@@ -54,46 +55,24 @@ public class Movimiento : MonoBehaviour
             currentPosicion = Mathf.Clamp(newIndex, 0, posiblesMovimientos.Count - 1);
 
             // Opcional: imprimir para depuración
-            Debug.Log("Cambiando a posición: " + currentPosicion);
+           // Debug.Log("Cambiando a posición: " + currentPosicion);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica si colisionamos con el objeto de Puntuación
         if (other.CompareTag("Score"))
         {
-            Debug.Log("¡Puntuación obtenida!");
-
-            // **TODO: Implementar la lógica del puntaje (ej: ScoreManager.AddScore(1));**
-
-            // Destruir el objeto de puntuación
+            Score++;
             Destroy(other.gameObject);
         }
-    }
 
-    // **Manejo de Colisión (Objetos con Is Trigger = false, ej: Obstáculos)**
-    private void OnCollisionEnter(Collision collision)
-    {
-        // Verifica si colisionamos con el Obstáculo
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if (other.CompareTag("Obstacle"))
         {
-            Debug.Log("¡Colisión con Obstáculo! ¡Game Over!");
-            Destroy(collision.gameObject);
-            // **TODO: Implementar la lógica de Game Over, reinicio, o pérdida de vida.**
-
-            // Ejemplo simple de Game Over: Congelar el tiempo
-            Time.timeScale = 0f;
+            Destroy(other.gameObject);
+            Vida--;
         }
     }
-
-
-
-
-
-
-
-
 }
 
 
