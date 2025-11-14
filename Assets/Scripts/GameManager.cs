@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
 
     public Text playerVidas;
+    public Text playerPuntaje;
 
     public GameObject canvasVictoria;
 
@@ -64,6 +65,8 @@ public class GameManager : MonoBehaviour
         }
 
         playerVidas.text = "Vidas: " + player.Vida;
+
+        playerPuntaje.text = "Puntaje: " + player.Score;
 
     }
 
