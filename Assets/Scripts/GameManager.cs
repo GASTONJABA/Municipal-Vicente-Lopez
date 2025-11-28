@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public Text playerPuntaje;
 
     public GameObject canvasVictoria;
+    public GameObject canvasPerdiste;
+    public bool juegoTerminado = false;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +64,9 @@ public class GameManager : MonoBehaviour
         if (player.Vida <= 0)
         {
             Debug.Log("Game over");
+            juegoTerminado = true;
+            canvasPerdiste.SetActive(true);
+           
         }
 
         playerVidas.text = "Vidas: " + player.Vida;
