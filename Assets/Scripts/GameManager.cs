@@ -77,12 +77,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void reiniciarNivel ()
-    {
-        Time.timeScale = 1f;
-        // Carga la escena actual de nuevo para reiniciarla.
-        // Usamos 'buildIndex' porque es el método más fiable.
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+   
 
 }

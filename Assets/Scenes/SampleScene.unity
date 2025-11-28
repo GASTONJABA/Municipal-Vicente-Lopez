@@ -825,16 +825,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1467696835}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: reiniciarNivel
-        m_Mode: 1
+      - m_Target: {fileID: 1544241271}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &489767156
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.20087217, g: 0.24263123, b: 0.6981132, a: 1}
+  m_Color: {r: 0.8503916, g: 0.8568129, b: 0.9245283, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1263,16 +1263,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1467696835}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: reiniciarNivel
-        m_Mode: 1
+      - m_Target: {fileID: 1544241271}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &718617213
@@ -1530,13 +1530,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867882109}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1827090229}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 931673286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1605,6 +1605,7 @@ Transform:
   m_Children:
   - {fileID: 1483156524}
   - {fileID: 559929024}
+  - {fileID: 867882113}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &947015509
@@ -1677,7 +1678,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: REINICIAR
+  m_Text: MENU
 --- !u!222 &947015512
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2773,6 +2774,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1526471502}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1544241270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1544241272}
+  - component: {fileID: 1544241271}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1544241271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544241270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7422988043c15d48b23ef9c0ec3fc1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1544241272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544241270}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 460.30634, y: 399.41696, z: -6.2846737}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1545517364
 GameObject:
   m_ObjectHideFlags: 0
@@ -3189,7 +3234,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: REINICIAR
+  m_Text: MENU
 --- !u!222 &1707653001
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3233,7 +3278,7 @@ MonoBehaviour:
   - {fileID: 2143501706}
   obstaclePrefab: {fileID: 5402380028994016771, guid: e1ddec45e21fc4a4294741b6147fad2c,
     type: 3}
-  scoreItemPrefab: {fileID: 4454276625427872264, guid: 3068e50bf8208994094b2af372988daf,
+  scoreItemPrefab: {fileID: 9051433200504259057, guid: 5c5a3d4bf60635944addf7de400fc354,
     type: 3}
   spawnRate: 1.5
   obstacleChance: 0.7
@@ -3393,15 +3438,15 @@ RectTransform:
   m_GameObject: {fileID: 2054972099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.46, y: 1.15, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1483156524}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 416, y: 30}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.54643756, y: 0}
+  m_AnchorMax: {x: 1, y: 0.097}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2054972101
 CanvasRenderer:
@@ -3433,18 +3478,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 85
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 5
-  m_Text: 
+  m_Text: 'Puntaje:'
 --- !u!1 &2143501705
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,7 +3530,6 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1990383664}
   - {fileID: 1282594301}
-  - {fileID: 867882113}
   - {fileID: 931673286}
   - {fileID: 1818339320}
   - {fileID: 164369491}
@@ -3493,3 +3537,4 @@ SceneRoots:
   - {fileID: 1625120204}
   - {fileID: 1467696836}
   - {fileID: 129410331}
+  - {fileID: 1544241272}
