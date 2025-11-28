@@ -57,6 +57,8 @@ public class GameManager : MonoBehaviour
             // Congela el tiempo
             Time.timeScale = 0f;
 
+            playerPuntaje.text = "Puntaje: " + player.Score;
+
             // Opcional: Desactiva el script para que no se ejecute más
             this.enabled = false;
         }

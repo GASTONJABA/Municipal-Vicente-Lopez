@@ -48,7 +48,7 @@ public class ObjectSpawner : MonoBehaviour
         }
 
         // 3. Crear el objeto en la escena
-        Instantiate(prefabToInstantiate, spawnPoint, Quaternion.identity);
+        Instantiate(prefabToInstantiate, spawnPoint, prefabToInstantiate.transform.rotation);
 
     }
 
