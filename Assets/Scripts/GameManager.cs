@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("you win");
             canvasVictoria.SetActive(true);
             // Congela el tiempo
-            Time.timeScale = 0f;
+            Time.timeScale = 1f;
 
             playerPuntaje.text = "Puntaje: " + player.Score;
 
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
             //playerSound.stopSoundFondo();
 
             // Congela el tiempo
-            Time.timeScale = 0f;
+            Time.timeScale = 1f;
             // Opcional: Desactiva el script para que no se ejecute más
             //this.enabled = false;
         }
