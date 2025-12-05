@@ -1,11 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 
 public class Player : MonoBehaviour
 {
+    public GameManager gameManager;
+
+
+
+    public playerSound playerSound;
+
+
+
 
     public List<Transform> posiblesMovimientos = new List<Transform>();
     public int currentPosicion = 1;
@@ -19,6 +28,9 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        // audioSource.PlayOneShot(musicaFondo);
+        playerSound.playSoundFondo();
         // Asegurarse de que el camión empiece en la posición inicial
         if (posiblesMovimientos.Count > 0)
         {
@@ -56,22 +68,24 @@ public class Player : MonoBehaviour
             currentPosicion = Mathf.Clamp(newIndex, 0, posiblesMovimientos.Count - 1);
 
             // Opcional: imprimir para depuración
-           // Debug.Log("Cambiando a posición: " + currentPosicion);
+            // Debug.Log("Cambiando a posición: " + currentPosicion);
         }
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Score"))
         {
             Score++;
             Destroy(other.gameObject);
+           playerSound.playSoundScore();
         }
 
         if (other.CompareTag("Obstacle"))
         {
             Destroy(other.gameObject);
             Vida--;
+            playerSound.playSoundChoque();
         }
     }
 }

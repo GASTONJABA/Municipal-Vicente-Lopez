@@ -7,12 +7,13 @@ using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
-{
+{   
     public Player player;
+   // public playerSound playerSound;
     public float tiemmpoMaximo = 60;//antes timer
     public float tiempoActual = 50;//antes starttimer
     public Slider recorrido; //esta sera la referencia del slider gastontontorontonton
-
+  
 
     public Text playerVidas;
     public Text playerPuntaje;
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //playerSound.playSoundFondo();
         recorrido.maxValue = tiemmpoMaximo;
         // 2. Establece el valor ACTUAL del slider a 0 para que inicie vacío
         recorrido.value = tiempoActual;
@@ -63,12 +65,18 @@ public class GameManager : MonoBehaviour
             this.enabled = false;
         }
 
-        if (player.Vida <= 0)
+        if (juegoTerminado == false && player.Vida <= 0)//(player.Vida <= 0)
         {
             Debug.Log("Game over");
             juegoTerminado = true;
-            canvasPerdiste.SetActive(true);
            
+            canvasPerdiste.SetActive(true);
+            //playerSound.stopSoundFondo();
+
+            // Congela el tiempo
+            Time.timeScale = 0f;
+            // Opcional: Desactiva el script para que no se ejecute más
+            //this.enabled = false;
         }
 
         playerVidas.text = "Vidas: " + player.Vida;
